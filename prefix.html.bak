@@ -1,0 +1,825 @@
+<HTML>
+<HEAD>
+<TITLE>Anglonas</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=windows-1257">
+</HEAD>
+<STYLE>
+<!--
+	body
+	{
+		font-family: Aistika, "Times New Roman";
+		font-size: 11pt;
+	}
+	SPAN.HW
+	{
+		font-family: Arial, Helvetica;
+		font-weight: bold;
+		color: brown;
+	}
+	SPAN.HW1
+	{
+		font-family: Arial, Helvetica;
+		font-weight: bold;
+		font-style: normal;
+		color: brown;
+	}
+	SPAN.HW SUP
+	{
+		position: relative;
+		font-weight:normal;
+		font-size: 80%;
+		top:-1%;
+	}
+	SPAN.PH
+	{
+		font-family: Tarminis;
+		color="#606000";
+	}
+	SPAN.RF
+	{
+		font-family: Arial, Helvetica;
+		font-style: normal;
+		font-weight: bold;
+	}
+	SPAN.EnAbbr
+	{
+		color: gray;
+		font-style:italic;
+	}
+	SPAN.LtAbbr
+	{
+		color: gray;
+		font-style:italic;
+	}
+	SPAN.ENCM
+	{
+		color: gray;
+		font-style:italic;
+		font-family: Aistika, "Times New Roman";
+	}
+	SPAN.LTCM
+	{
+		color: gray;
+		font-style:italic;
+		font-family: Aistika, "Times New Roman";
+	}
+	SPAN.LTCME
+	{
+		font-style:normal;
+	}
+	SPAN.PHCM
+	{
+		font-style:italic;
+		font-family: Aistika, "Times New Roman";
+	}
+	SPAN.PHR
+	{
+		position: relative;
+		top:-0.5%;
+	}
+	SPAN.LT
+	{
+		color: red;
+		font-family: Aistika, "Times New Roman";
+	}
+	SPAN.LA
+	{
+		font-family: Tarminis;
+		font-size: 95%;
+	}
+	DT.EN
+	{
+		font-family: Arial;
+		font-style:italic;
+		font-weight:bold;
+	}
+	SPAN.EN
+	{
+		color: green;
+		font-family: Arial;
+		font-style:italic;
+		font-weight:bold;
+		font-size: 90%;
+	}
+	SPAN.RestEN
+	{
+		color: green;
+		font-family: Arial;
+		font-style:italic;
+		font-weight:bold;
+		font-size: 90%;
+	}
+	SPAN.ITN
+	{
+		color: red;
+		font-family: Arial;
+		font-size: 80%;
+	}
+	SPAN.ITL
+	{
+		color: red;
+		font-family: Arial;
+		font-size: 80%;
+	}
+	SPAN.SY
+	{
+		font-family: Symbol;
+	}
+	SPAN.SYB
+	{
+		color: red;
+		font-family: Wingdings;
+		font-style:normal;
+	}
+	SPAN.WDB
+	{
+		position: relative;
+		color: red;
+		font-family: Wingdings;
+		font-size: 175%;
+		font-style:normal;
+		top:1%;
+	}
+	SPAN.WDB
+	{
+		position: relative;
+		color: red;
+		font-family: Wingdings;
+		font-size: 175%;
+		font-style:normal;
+		top:1%;
+	}
+	SPAN.FULLSTARS
+	{
+		position: relative;
+	}
+	SPAN.OPENSTARS
+	{
+		position: relative;
+		font-size: 90%;
+	}
+	SPAN.SELECTED
+	{
+		//color: #FFFAE6;
+		color: black;
+		background: #FEE5B2;
+	}
+	P
+	{
+		margin-bottom: 0;
+		line-height: 20px;
+	}
+	P.HP
+	{
+		margin-top: 0;
+		background-color: #FFF0C8;
+	}
+	P.HP1
+	{
+		font-family: Aistika, "Times New Roman";
+		margin-left: 12px;
+		margin-bottom: 0;
+		margin-top: 0;
+		line-height: 20px;
+	}
+	P.IT
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 20px;
+		line-height: 20px;
+	}
+	P.IT2
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 40px;
+		line-height: 20px;
+	}
+	P.IT3
+	{
+		margin-top: 0;
+		margin-left: 22px;
+		line-height: 20px;
+	}
+	P.IT4
+	{
+		margin-top: 0;
+		margin-left: 22px;
+		line-height: 20px;
+	}
+	P.IT5
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 60px;
+		line-height: 20px;
+	}
+	P.IT6
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 80px;
+		line-height: 20px;
+	}
+	P.STARS
+	{
+		margin-top: 12;
+		margin-bottom: 4px;
+		margin-left: 0;
+		font-family: Wingdings;
+		font-size: 130%;
+		font-style:normal;
+		color: #C0C0C0;
+	}
+	A
+	{
+		font-family: Aistika, "Times New Roman";
+		font-size: 11pt;
+		color: darkgreen;
+	}
+	A:active{color:green;}
+	A:visited{color:darkgreen;}
+	A:hover{color:green;}
+	A.aback 
+	{
+		margin-left: 0px;
+	}
+-->
+</STYLE>
+<SCRIPT>
+<!--
+var PrevColor
+function EnAbbrAdvise(src) {
+	switch (src.outerText){
+	case "a":
+		src.title = "adjective / būdvardis"
+		break;
+	case "adv":
+		src.title = "adverb / prieveiksmis"
+		break;
+	case "attr":
+		src.title = "attributive / vart. pažyminiu"
+		break;
+	case "aux":
+		src.title = "auxiliary / pagalbinis, tarnybinis"
+		break;
+	case "card":
+		src.title = "cardinal (numeral) / kiekinis (skaitvardis)"
+		break;
+	case "comp":
+		src.title = "comparative (degree) / aukštesnysis (laipsnis)"
+		break;
+	case "conj":
+		src.title = "conjunction / jungtukas"
+		break;
+	case "demonstr":
+		src.title = "demonstrative (pronoun) / parodomasis (įvardis)"
+		break;
+	case "emph":
+		src.title = "emphatic (pronoun) / pabrėžiamasis (įvardis)"
+		break;
+	case "etc.":
+		src.title = "et cetera (lot.) / ir kita, ir taip toliau"
+		break;
+	case "ger":
+		src.title = "gerund / gerundijus"
+		break;
+	case "imp":
+		src.title = "imperative (mood) / liepiamoji (nuosaka)"
+		break;
+	case "impers":
+		src.title = "impersonal (pronoun) / beasmenis (įvardis)"
+		break;
+	case "indef":
+		src.title = "indefinite (pronoun) / nežymimasis (įvardis)"
+		break;
+	case "inf":
+		src.title = "infinitive / bendratis"
+		break;
+	case "int":
+		src.title = "interjection / jaustukas, ištiktukas"
+		break;
+	case "mod":
+		src.title = "modal / modalinis (veiksmažodis); modalinis žodis"
+		break;
+	case "n":
+		src.title = "noun / daiktavardis"
+		break;
+	case "num":
+		src.title = "numeral / skaitvardis"
+		break;
+	case "ord":
+		src.title = "ordinal (numeral) / kelintinis (skaitvardis)"
+		break;
+	case "pI":
+		src.title = "participle I / pirmasis dalyvis"
+		break;
+	case "pII":
+		src.title = "participle II / antrasis dalyvis"
+		break;
+	case "part":
+		src.title = "particle / dalelytė"
+		break;
+	case "pass":
+		src.title = "passive (voice) / neveikiamoji (rūšis)"
+		break;
+	case "past":
+		src.title = "past tense / būtasis laikas"
+		break;
+	case "pers":
+		src.title = "personal (pronoun) / asmeninis (įvardis)"
+		break;
+	case "pl":
+		src.title = "plural / daugiskaita"
+		break;
+	case "poss":
+		src.title = "possessive (pronoun) / savybinis (įvardis)"
+		break;
+	case "predic":
+		src.title = "predicative / vart. vardine tarinio dalimi"
+		break;
+	case "pref":
+		src.title = "prefix / priešdėlis"
+		break;
+	case "prep":
+		src.title = "preposition / prielinksnis"
+		break;
+	case "pron":
+		src.title = "pronoun / įvardis"
+		break;
+	case "refl":
+		src.title = "reflexive (pronoun) / sangrąžinis (įvardis); vart. su įvardžiais oneself, one's (prie veiksmažodžių)"
+		break;
+	case "rel":
+		src.title = "relative (pronoun, adverb) / santykinis (įvardis, prieveiksmis)"
+		break;
+	case "sg":
+		src.title = "singular / vienaskaita"
+		break;
+	case "smb":
+		src.title = "somebody / kas nors (apie asmenis ir gyvūnus)"
+		break;
+	case "smth":
+		src.title = "something / kas nors (apie daiktus)"
+		break;
+	case "suff":
+		src.title = "suffix / priesaga"
+		break;
+	case "superl":
+		src.title = "superlative (degree) / aukščiausiasis (laipsnis)"
+		break;
+	case "v":
+		src.title = "verb / veiksmažodis"
+		break;
+	default:
+		src.title =src.outerText;
+	}
+	PrevColor = src.style.color
+	src.style.color = "red";
+	return;
+	}
+function EnAbbrOut(src) {
+	src.style.color = PrevColor;
+	return;
+	}
+function LtAbbrAdvise(src) {
+	switch (src.outerText){
+	case "air.":
+		src.title = "airiškai, vart. anglų kalboje Airijoje"
+		break;
+	case "amer.":
+		src.title = "amerikanizmas, vart. anglų kalboje JAV ir Kanadoje"
+		break;
+	case "anat.":
+		src.title = "anatomija"
+		break;
+	case "arab.":
+		src.title = "arabų kalba"
+		break;
+	case "archeol.":
+		src.title = "archeologija"
+		break;
+	case "archit.":
+		src.title = "architektūra"
+		break;
+	case "asm.":
+		src.title = "asmuo"
+		break;
+	case "astr.":
+		src.title = "astronomija"
+		break;
+	case "austral.":
+		src.title = "vart. anglų kalboje Australijoje ir N. Zelandijoje"
+		break;
+	case "aut.":
+		src.title = "automobilis, automobilizmas"
+		break;
+	case "av.":
+		src.title = "aviacija"
+		break;
+	case "bažn.":
+		src.title = "bažnytinis terminas"
+		break;
+	case "bdv.":
+		src.title = "būdvardis"
+		break;
+	case "bibl.":
+		src.title = "Biblija"
+		break;
+	case "biol.":
+		src.title = "biologija"
+		break;
+	case "bot.":
+		src.title = "botanika"
+		break;
+	case "buh.":
+		src.title = "buhalterija"
+		break;
+	case "chem.":
+		src.title = "chemija"
+		break;
+	case "d.":
+		src.title = "didysis"
+		break;
+	case "dgs.":
+		src.title = "daugiskaita, daugiskaitinis"
+		break;
+	case "dial.":
+		src.title = "dialektizmas, tarmybė"
+		break;
+	case "dipl.":
+		src.title = "diplomatija"
+		break;
+	case "dktv.":
+		src.title = "daiktavardis"
+		break;
+	case "džn.":
+		src.title = "dažnai, dažniau"
+		break;
+	case "ekon.":
+		src.title = "ekonomika"
+		break;
+	case "el.":
+		src.title = "elektra, elektrotechnika, elektronika"
+		break;
+	case "esam.":
+		src.title = "esamasis (laikas)"
+		break;
+	case "euf.":
+		src.title = "eufemizmas"
+		break;
+	case "fam.":
+		src.title = "familiariai"
+		break;
+	case "farm.":
+		src.title = "farmacija"
+		break;
+	case "filos.":
+		src.title = "filosofija"
+		break;
+	case "fin.":
+		src.title = "finansai"
+		break;
+	case "fiz.":
+		src.title = "fizika"
+		break;
+	case "fiziol.":
+		src.title = "fiziologija"
+		break;
+	case "flk.":
+		src.title = "folkloras"
+		break;
+	case "fon.":
+		src.title = "fonetika, fonologija"
+		break;
+	case "fot.":
+		src.title = "fotografija"
+		break;
+	case "geod.":
+		src.title = "geodezija"
+		break;
+	case "geogr.":
+		src.title = "geografija"
+		break;
+	case "geol.":
+		src.title = "geologija"
+		break;
+	case "geom.":
+		src.title = "geometrija"
+		break;
+	case "glžk.":
+		src.title = "geležinkelis"
+		break;
+	case "gr.":
+		src.title = "graikų (kalba); graikiškas"
+		break;
+	case "gram.":
+		src.title = "gramatika"
+		break;
+	case "her.":
+		src.title = "heraldika"
+		break;
+	case "hidr.":
+		src.title = "hidrotechnika, hidrologija"
+		break;
+	case "ind.":
+		src.title = "vart. anglų kalboje Indijoje ir Pakistane"
+		break;
+	case "iron.":
+		src.title = "ironiškai"
+		break;
+	case "isp.":
+		src.title = "ispanų kalbos kilmės žodis"
+		break;
+	case "ist.":
+		src.title = "istorizmas; istorija"
+		break;
+	case "it.":
+		src.title = "italų kalbos kilmės žodis"
+		break;
+	case "įv. reikšm.":
+		src.title = "įvairiomis reikšmėmis"
+		break;
+	case "jap.":
+		src.title = "japonų kalbos kilmės žodis"
+		break;
+	case "JT":
+		src.title = "Jungtinės Tautos "
+		break;
+	case "juok.":
+		src.title = "juokaujamai"
+		break;
+	case "jūr.":
+		src.title = "jūrininkystė, laivininkystė"
+		break;
+	case "kalb.":
+		src.title = "kalbotyra"
+		break;
+	case "kar.":
+		src.title = "karyba, karinis terminas"
+		break;
+	case "kas.":
+		src.title = "kasyba"
+		break;
+	case "kin.":
+		src.title = "kinas, kinematografija"
+		break;
+	case "klaus.":
+		src.title = "klausiamasis"
+		break;
+	case "knyg.":
+		src.title = "knyginis žodis"
+		break;
+	case "kom.":
+		src.title = "komercija"
+		break;
+	case "komp.":
+		src.title = "kompiuteris, kompiuterijos terminas"
+		break;
+	case "kosm.":
+		src.title = "kosmonautika"
+		break;
+	case "ir kt.":
+		src.title = "ir kitas"
+		break;
+	case "kul.":
+		src.title = "kulinarija"
+		break;
+	case "kuop.":
+		src.title = "kuopine prasme"
+		break;
+	case "l.":
+		src.title = "laikas (gramatine prasme)"
+		break;
+	case "lit.":
+		src.title = "literatūros teorija/istorija; literatūrinis"
+		break;
+	case "log.":
+		src.title = "logika"
+		break;
+	case "lot.":
+		src.title = "lotynų kalba"
+		break;
+	case "mat.":
+		src.title = "matematika"
+		break;
+	case "maž.":
+		src.title = "mažybinis"
+		break;
+	case "med.":
+		src.title = "medicina"
+		break;
+	case "medž.":
+		src.title = "medžioklė"
+		break;
+	case "men.":
+		src.title = "menas"
+		break;
+	case "menk.":
+		src.title = "menkinamai"
+		break;
+	case "metal.":
+		src.title = "metalurgija"
+		break;
+	case "meteor.":
+		src.title = "meteorologija"
+		break;
+	case "min.":
+		src.title = "mineralogija"
+		break;
+	case "mit.":
+		src.title = "mitologija"
+		break;
+	case "mok.":
+		src.title = "mokyklinis; mokinių kalboje"
+		break;
+	case "muz.":
+		src.title = "muzika; muzikinis"
+		break;
+	case "n.":
+		src.title = "naujasis"
+		break;
+	case "neig.":
+		src.title = "neigiamas(is); neigiamai"
+		break;
+	case "niek.":
+		src.title = "niekinamai"
+		break;
+	case "ofic.":
+		src.title = "oficialus "
+		break;
+	case "opt.":
+		src.title = "optika"
+		break;
+	case "p.":
+		src.title = "pietūs"
+		break;
+	case "ir pan.":
+		src.title = "ir panašiai"
+		break;
+	case "parl.":
+		src.title = "parlamentas"
+		break;
+	case "pat.":
+		src.title = "patarlė, priežodis"
+		break;
+	case "paž.":
+		src.title = "pažodžiui"
+		break;
+	case "plg.":
+		src.title = "palygink"
+		break;
+	case "poet.":
+		src.title = "poetizmas"
+		break;
+	case "poligr.":
+		src.title = "poligrafija"
+		break;
+	case "polit.":
+		src.title = "politika"
+		break;
+	case "ppr.":
+		src.title = "paprastai"
+		break;
+	case "pr.":
+		src.title = "prancūzų kalbos kilmės žodis"
+		break;
+	case "prk.":
+		src.title = "perkeltine reikšme"
+		break;
+	case "psn.":
+		src.title = "pasenęs žodis/posakis"
+		break;
+	case "psich.":
+		src.title = "psichologija"
+		break;
+	case "pvz.":
+		src.title = "pavyzdžiui"
+		break;
+	case "r.":
+		src.title = "rytai"
+		break;
+	case "rad.":
+		src.title = "radijas; radiotechnika "
+		break;
+	case "rel.":
+		src.title = "religija"
+		break;
+	case "ret.":
+		src.title = "retai"
+		break;
+	case "rus.":
+		src.title = "rusų kalbos kilmės žodis"
+		break;
+	case "sen.":
+		src.title = "senovė, senasis"
+		break;
+	case "sl.":
+		src.title = "slengas, žargonas"
+		break;
+	case "spec.":
+		src.title = "specialus terminas, vart. įvairiose mokslo ir technikos srityse"
+		break;
+	case "sport.":
+		src.title = "sportas"
+		break;
+	case "stat.":
+		src.title = "statyba"
+		break;
+	case "sudurt.":
+		src.title = "sudurtinis"
+		break;
+	case "sutr.":
+		src.title = "sutrumpintas; santrumpa"
+		break;
+	case "š.":
+		src.title = "šiaurė"
+		break;
+	case "šach.":
+		src.title = "šachmatai"
+		break;
+	case "šiaur.":
+		src.title = "vart. Anglijos šiaurėje ir Škotijoje"
+		break;
+	case "škot.":
+		src.title = "škotiškai, vart. škotų tarmėje"
+		break;
+	case "šnek.":
+		src.title = "šnekamoji kalba"
+		break;
+	case "teatr.":
+		src.title = "teatras"
+		break;
+	case "tech.":
+		src.title = "technika"
+		break;
+	case "teig.":
+		src.title = "teigiamas(is); teigiamai"
+		break;
+	case "teis.":
+		src.title = "teisė, juridinis terminas"
+		break;
+	case "tekst.":
+		src.title = "tekstilė"
+		break;
+	case "tel.":
+		src.title = "televizija"
+		break;
+	case "tik v.":
+		src.title = "tik vyriškosios lyties asmuo/gyvūnas"
+		break;
+	case "t. p.":
+		src.title = "taip pat "
+		break;
+	case "v.":
+		src.title = "vakarai"
+		break;
+	case "vaik.":
+		src.title = "vaikų kalbos žodis/posakis"
+		break;
+	case "vart.":
+		src.title = "vartojama(s)"
+		break;
+	case "vet.":
+		src.title = "veterinarija"
+		break;
+	case "vid.":
+		src.title = "vidurinis"
+		break;
+	case "vksm.":
+		src.title = "veiksmažodis"
+		break;
+	case "vns.":
+		src.title = "vienaskaita"
+		break;
+	case "vok.":
+		src.title = "vokiečių kalbos kilmės žodis"
+		break;
+	case "vulg.":
+		src.title = "vulgariai, tabu"
+		break;
+	case "zool.":
+		src.title = "zoologija"
+		break;
+	case "žr.":
+		src.title = "žiūrėk"
+		break;
+	case "ž. ū.":
+		src.title = "žemės ūkis"
+		break;
+	default:
+		src.title =src.outerText;
+	}
+	PrevColor = src.style.color
+	src.style.color ="red";
+	return;
+	}
+function LtAbbrOut(src) {
+	src.style.color = PrevColor;
+	return;
+	}
+-->
+</SCRIPT>
+<BODY bgcolor="#FFFAE6">
+
