@@ -17,7 +17,8 @@ PMainWindow :: PMainWindow(QWidget* parent):
   QMainWindow(parent),
   ui(new Ui::PMainWindow)
 {
-  QAction* action;
+  QAction*      action;
+  QVBoxLayout*  layout;
 
   ui->setupUi(this);
 
@@ -36,13 +37,25 @@ PMainWindow :: PMainWindow(QWidget* parent):
   m_searchDock = new PSearchDock(m_proxyModel, this);
   addDockWidget(Qt::LeftDockWidgetArea, m_searchDock);
 
+  m_searchBox = new QLineEdit(this);
+  m_searchBox->setMinimumHeight(25);
+  m_searchBox->setVisible(false);
+
   m_webView = new QWebView(this);
-  ui->tabWidget->insertTab(0, m_webView, "Dict");
-  ui->tabWidget->setCurrentIndex(0);
+
+  layout = new QVBoxLayout(this);
+
+  ui->dictTab->setLayout(layout);
+  layout->addWidget(m_webView);
+  layout->addWidget(m_searchBox);
 
   action = m_webView->pageAction(QWebPage::Copy);
   action->setShortcut(QKeySequence("Ctrl+c"));
   ui->menuEdit->addAction(action);
+
+  QLineEdit::connect(m_searchBox, SIGNAL(textChanged(QString)), this, SLOT(setFindText(QString)));
+  QLineEdit::connect(m_searchBox, SIGNAL(returnPressed()), this, SLOT(findNext()));
+  //QLineEdit::connect(m_searchBox, SIGNAL(), this, SLOT(findNext()));
 
   QLineEdit::connect(m_searchDock->getFilterEdit(), SIGNAL(textChanged(QString)), this, SLOT(setFilter(QString)));
   //QListView::connect(m_searchDock->getWordsView(), SIGNAL(activated(QModelIndex)), this, SLOT(setWord(QModelIndex)));
@@ -53,6 +66,7 @@ PMainWindow :: PMainWindow(QWidget* parent):
   QItemSelectionModel::connect(m_selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
                                this, SLOT(setSelection(QItemSelection,QItemSelection)));
   QPushButton::connect(ui->transButton, SIGNAL(clicked()), this, SLOT(transcribe()));
+  QAction::connect(ui->actionFind, SIGNAL(triggered()), this, SLOT(findText()));
 
   setMode(true);
 }
@@ -79,6 +93,29 @@ void PMainWindow :: changeEvent(QEvent *e)
     default:
       break;
   }
+}
+
+/**********************************************************************************************/
+
+/*void PMainWindow :: findEnd()
+{
+  m_searchBox->setVisible(false);
+}*/
+
+/**********************************************************************************************/
+
+void PMainWindow :: findNext()
+{
+  m_webView->findText(m_searchBox->text(), QWebPage::FindWrapsAroundDocument);
+  m_webView->findText(m_searchBox->text(), QWebPage::HighlightAllOccurrences);
+}
+
+/**********************************************************************************************/
+
+void PMainWindow :: findText()
+{
+  m_searchBox->setVisible(true);
+  m_searchBox->setFocus(Qt::ShortcutFocusReason);
 }
 
 /**********************************************************************************************/
@@ -111,6 +148,14 @@ void PMainWindow :: setFilter(const QString& filter)
     m_selectionModel->select(QItemSelection(index0, index0), QItemSelectionModel::ClearAndSelect);
 
   }
+}
+
+/**********************************************************************************************/
+
+void PMainWindow ::	setFindText(const QString& text)
+{
+  m_webView->findText(QString(), QWebPage::HighlightAllOccurrences);
+  m_webView->findText(text, QWebPage::HighlightAllOccurrences);
 }
 
 /**********************************************************************************************/

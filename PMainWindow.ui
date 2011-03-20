@@ -20,6 +20,11 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
+      <widget class="QWidget" name="dictTab">
+       <attribute name="title">
+        <string>Dict</string>
+       </attribute>
+      </widget>
       <widget class="QWidget" name="transTab">
        <attribute name="title">
         <string>Tarimai</string>
@@ -60,6 +65,7 @@
     <property name="title">
      <string>Edit</string>
     </property>
+    <addaction name="actionFind"/>
    </widget>
    <addaction name="menuEdit"/>
   </widget>
@@ -78,6 +84,14 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>Find</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>
