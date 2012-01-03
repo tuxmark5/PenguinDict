@@ -1,0 +1,24 @@
+PenguinDict - Anglono portas į Linux.
+
+Norint pasileisti, reikia (čia ant Ubuntu based distribucijų):
+
+1. Parsisiųsti žodyno kodą (naudojantis git arba galima download ZIP paimti githube):
+git clone git://github.com/tuxmark5/PenguinDict.git
+
+2. Parsisiųsti įrankius kodui sukompiliuoti:
+sudo apt-get install qt4-dev-tools
+
+3. Susikompiliuoti žodyną:
+qmake
+make
+
+4. Susirasti iš kur nors failą ANGLONAS.dic (čia iš windowsų Anglono instaliacijos galima nusikopint šitą)
+
+5. Pasileisti žodyną:
+./PenguinDict
+
+***********************************************************************************
+Galimos problemos:
+Jei žodynas neras failo ANGLONAS.dic, tai programa nuluš (reiks kada nors sutvarkyt)
+***********************************************************************************
+
