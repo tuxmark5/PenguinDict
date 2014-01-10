@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui webkit
+CONFIG   += debug
+QT       += core gui webkit webkitwidgets widgets
 
 TARGET = PenguinDict
 TEMPLATE = app

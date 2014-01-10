@@ -3,9 +3,9 @@
 #include <PMainWindow.hh>
 #include <PSearchDock.hh>
 #include <PTextEdit.hh>
-#include <QtGui/QLineEdit>
-#include <QtGui/QListView>
-#include <QtWebKit/QWebView>
+#include <QtWebKitWidgets/QWebView>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListView>
 #include "ui_PMainWindow.h"
 #include "ui_PSearchDock.h"
 
@@ -26,7 +26,11 @@ PMainWindow :: PMainWindow(QWidget* parent):
   ui->gridLayout->addWidget(m_dstTransEdit, 1, 0, 1, 2);
 
   m_model = new PDictListModel(this);
-  m_model->openDict("Anglonas.dic");
+  if (!m_model->openDict("Anglonas.dic"))
+  {
+    fprintf(stderr, "dictionary file 'Anglonas.dic' not found");
+    exit(-1);
+  }
 
   readPrefix("prefix.html");
 

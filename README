@@ -6,7 +6,7 @@ Norint pasileisti, reikia (čia ant Ubuntu based distribucijų):
 git clone git://github.com/tuxmark5/PenguinDict.git
 
 2. Parsisiųsti įrankius kodui sukompiliuoti:
-sudo apt-get install qt4-dev-tools
+sudo apt-get install qtbase5-dev libqt5webkit5-dev
 
 3. Susikompiliuoti žodyną:
 qmake
@@ -17,8 +17,5 @@ make
 5. Pasileisti žodyną:
 ./PenguinDict
 
-***********************************************************************************
-Galimos problemos:
-Jei žodynas neras failo ANGLONAS.dic, tai programa nuluš (reiks kada nors sutvarkyt)
 ***********************************************************************************
 

@@ -4,8 +4,8 @@
 /**********************************************************************************************/
 #include <Penguin.hh>
 #include <QtCore/QModelIndex>
-#include <QtGui/QMainWindow>
-#include <QtGui/QSortFilterProxyModel>
+#include <QtCore/QSortFilterProxyModel>
+#include <QtWidgets/QMainWindow>
 /********************************************* TX *********************************************/
 /*                                        PMainWindow                                         */
 /**********************************************************************************************/
