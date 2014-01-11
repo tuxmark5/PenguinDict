@@ -6,7 +6,7 @@ Norint pasileisti, reikia (čia ant Ubuntu based distribucijų):
 git clone git://github.com/tuxmark5/PenguinDict.git
 
 2. Parsisiųsti įrankius kodui sukompiliuoti:
-sudo apt-get install qtbase5-dev libqt5webkit5-dev
+sudo apt-get install build-essential g++ qtbase5-dev libsqlite3-dev libqt5webkit5-dev
 
 3. Susikompiliuoti žodyną:
 qmake
