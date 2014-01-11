@@ -18,6 +18,7 @@ PMainWindow :: PMainWindow(QWidget* parent):
   ui(new Ui::PMainWindow)
 {
   QAction*      action;
+  QAction*      actionMode;
   QVBoxLayout*  layout;
 
   ui->setupUi(this);
@@ -56,6 +57,14 @@ PMainWindow :: PMainWindow(QWidget* parent):
   action = m_webView->pageAction(QWebPage::Copy);
   action->setShortcut(QKeySequence("Ctrl+c"));
   ui->menuEdit->addAction(action);
+  
+  actionMode = new QAction(this);
+  actionMode->setCheckable(true);
+  actionMode->setChecked(true);
+  actionMode->setShortcut(QKeySequence("F2"));
+  actionMode->setText("LT -> EN");
+  m_searchDock->ui->modeButton->setDefaultAction(actionMode);
+  ui->menuEdit->addAction(actionMode);
 
   QLineEdit::connect(m_searchBox, SIGNAL(textChanged(QString)), this, SLOT(setFindText(QString)));
   QLineEdit::connect(m_searchBox, SIGNAL(returnPressed()), this, SLOT(findNext()));
@@ -63,7 +72,7 @@ PMainWindow :: PMainWindow(QWidget* parent):
 
   QLineEdit::connect(m_searchDock->getFilterEdit(), SIGNAL(textChanged(QString)), this, SLOT(setFilter(QString)));
   //QListView::connect(m_searchDock->getWordsView(), SIGNAL(activated(QModelIndex)), this, SLOT(setWord(QModelIndex)));
-  QPushButton::connect(m_searchDock->ui->modeButton, SIGNAL(toggled(bool)), this, SLOT(setMode(bool)));
+  QAction::connect(actionMode, SIGNAL(toggled(bool)), this, SLOT(setMode(bool)));
   QWebView::connect(m_webView, SIGNAL(linkClicked(QUrl)), this, SLOT(setLink(QUrl)));
 
   m_selectionModel = m_searchDock->getWordsView()->selectionModel();
