@@ -62,7 +62,7 @@ PMainWindow :: PMainWindow(QWidget* parent):
   actionMode->setCheckable(true);
   actionMode->setChecked(true);
   actionMode->setShortcut(QKeySequence("F2"));
-  actionMode->setText("LT -> EN");
+  actionMode->setText("EN -> LT");
   m_searchDock->ui->modeButton->setDefaultAction(actionMode);
   ui->menuEdit->addAction(actionMode);
 
