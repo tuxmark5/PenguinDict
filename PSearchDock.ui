@@ -53,6 +53,11 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>searchField</tabstop>
+  <tabstop>modeButton</tabstop>
+  <tabstop>wordView</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

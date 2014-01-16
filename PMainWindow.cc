@@ -21,11 +21,6 @@ PMainWindow :: PMainWindow(QWidget* parent):
   QAction*      actionMode;
   QVBoxLayout*  layout;
 
-  ui->setupUi(this);
-
-  m_dstTransEdit = new PTextEdit(this);
-  ui->gridLayout->addWidget(m_dstTransEdit, 1, 0, 1, 2);
-
   m_model = new PDictListModel(this);
   if (!m_model->openDict("Anglonas.dic"))
   {
@@ -41,6 +36,11 @@ PMainWindow :: PMainWindow(QWidget* parent):
 
   m_searchDock = new PSearchDock(m_proxyModel, this);
   addDockWidget(Qt::LeftDockWidgetArea, m_searchDock);
+  
+  ui->setupUi(this);
+
+  m_dstTransEdit = new PTextEdit(this);
+  ui->gridLayout->addWidget(m_dstTransEdit, 1, 0, 1, 2);
 
   m_searchBox = new QLineEdit(this);
   m_searchBox->setMinimumHeight(25);
@@ -73,6 +73,8 @@ PMainWindow :: PMainWindow(QWidget* parent):
   QLineEdit::connect(m_searchDock->getFilterEdit(), SIGNAL(textChanged(QString)), this, SLOT(setFilter(QString)));
   //QListView::connect(m_searchDock->getWordsView(), SIGNAL(activated(QModelIndex)), this, SLOT(setWord(QModelIndex)));
   QAction::connect(actionMode, SIGNAL(toggled(bool)), this, SLOT(setMode(bool)));
+  QAction::connect(actionMode, SIGNAL(toggled(bool)), m_searchDock->getFilterEdit(), SLOT(setFocus()));
+
   QWebView::connect(m_webView, SIGNAL(linkClicked(QUrl)), this, SLOT(setLink(QUrl)));
 
   m_selectionModel = m_searchDock->getWordsView()->selectionModel();

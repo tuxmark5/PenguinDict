@@ -10,6 +10,7 @@ PSearchDock :: PSearchDock(QAbstractItemModel* model, QWidget* parent):
   ui(new Ui::PSearchDock)
 {
   ui->setupUi(this);
+  ui->searchField->setFocus(Qt::OtherFocusReason);
   ui->wordView->setModel(model);
 }
 
