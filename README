@@ -1,12 +1,15 @@
-PenguinDict - Anglono portas į Linux.
+PenguinDict - Anglono portas į Linux (ant Ubuntu based distribucijų).
 
-Norint pasileisti, reikia (čia ant Ubuntu based distribucijų):
+Instaliavimui galima pasinaudoti:
+https://github.com/vaidas100/install-PenguinDict
+
+Arba galima pasidaryti "rankutėmis":
 
 1. Parsisiųsti žodyno kodą (naudojantis git arba galima download ZIP paimti githube):
 git clone git://github.com/tuxmark5/PenguinDict.git
 
 2. Parsisiųsti įrankius kodui sukompiliuoti:
-sudo apt-get install build-essential g++ qtbase5-dev libsqlite3-dev libqt5webkit5-dev
+sudo apt-get install build-essential g++ git libqt5webkit5-dev libsqlite3-dev make qt5-default qt5-qmake qtbase5-dev qtdeclarative5-dev qtlocation5-dev qtquick1-5-dev qtsensors5-dev
 
 3. Susikompiliuoti žodyną:
 qmake
